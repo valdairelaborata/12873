@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Formulário </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Valdair">
+    <meta name="description" content="descrição top">
+    <meta name="keywords" content="html5, tecnologia">
+</head>
+
+<body>
+
+    <h1>Formulário</h1>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <label>E-mail:</label>
+            <input type="email" maxlength="10" placeholder="Informe seu e-mail aqui!!">
+
+            <p>
+                <label>Nr de filhos:</label>
+                <input type="number" min="0" max="100" step="10">
+            </p>
+
+            <p>
+                <label>Data de nascimento::</label>
+                <input type="date" min="2022-10-01" max="2023-02-20">
+            </p>
+
+            <fieldset>
+                <legend>Sexo:</legend>
+
+                <label>Masculino:
+                    <input type="radio" name="sexo" value="M">
+                </label>
+
+                <label>Feminino:
+                    <input type="radio" name="sexo" value="F">
+                </label>
+
+                <label>Indefinido:
+                    <input type="radio" name="sexo" value="I">
+                </label>
+
+            </fieldset>
+
+            <p>
+                <label>Estado</label>
+                <select name="estado">
+                    <option value="0">Selecione</option>
+                    <option value="1">RS</option>
+                    <option value="2">SC</option>
+                    <option value="4">PR</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Áreas de interesse </legend>
+            <label>
+                <input type="checkbox" name="areas" value="HTML"> HTML
+            </label>
+            <label>
+                <input type="checkbox" name="areas" value="CSS"> CSS
+            </label>
+            <label>
+                <input type="checkbox" name="areas" value="JS"> JS
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea style="resize: none" name="msg" cols="100" rows="5" maxlength="400"></textarea>
+
+            <textarea style="resize: none" name="contrato" cols="100" rows="2" readonly>
+                Aqui entra o texto do contrato que precisa ser aceito
+            </textarea>
+            <label><input type="checkbox" checked>Li e aceito</label>
+        </fieldset>
+
+        <hr>
+        <input type="reset" value="Cancelar">
+        <input type="submit" value="Mandar">
+        <input type="button" value="Ver mais detalhes">
+    </form>
+</body>
+
+</html>
