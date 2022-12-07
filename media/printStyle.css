@@ -1,0 +1,12 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+}
+
+a:after {
+    content: "[" attr(href) "]";
+    display: inline-block;
+    margin: 0 10px;
+
+}

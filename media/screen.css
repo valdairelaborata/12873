@@ -1,0 +1,54 @@
+body {
+    background: yellow;
+    font-size: 16px;
+}
+
+.teste {
+    background: red;
+    width: 320px;
+    height: 50px;
+}
+
+.container {
+    background: white;
+    padding: 15px;
+    font-size: 24px;
+}
+
+.container div {
+    background: #ccc;
+    margin-bottom: 15px;
+    height: 150px;
+    font-size: 22px;
+}
+
+@media screen and (min-width: 400px) {
+
+    body {
+        background: blue;
+        font-size: 16px;
+    }
+
+    .container div {
+        margin: 10px;
+        width: calc(50% - 20px);
+        float: left;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+
+    body {
+        background: red;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    body {
+        background: green;
+        font-size: 16px;
+    }
+}
