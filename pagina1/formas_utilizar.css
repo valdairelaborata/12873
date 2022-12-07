@@ -1,0 +1,38 @@
+body {
+    font-size: 20px;
+}
+
+p {
+    background-color: yellow;
+}
+
+div p {
+    background-color: rgb(186, 227, 212);
+}
+
+#paragrafo01 {
+    background-color: blue;
+}
+
+#paragrafo02 {
+    background-color: maroon;
+}
+
+.fundoAzul {
+    background-color: blue;
+}
+
+.font35px {
+    font-size: 35px;
+}
+
+.fontStyle {
+    font-style: italic;
+}
+
+.systemLabel {
+
+    font-size: 35px;
+    font-style: italic;
+    background-color: rgb(10, 135, 106);
+}
