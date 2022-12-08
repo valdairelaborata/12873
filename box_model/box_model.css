@@ -1,0 +1,29 @@
+p {
+    margin: 15px;
+    border: 2px;
+    border-color: red;
+    border-style: groove;
+    padding: 1px;
+}
+
+.icaro {
+    margin-top: 10px;
+    border: 5px;
+    border-color: black;
+    border-style: groove;
+}
+
+.icaroPad {
+    padding: 10px;
+}
+
+
+
+div {
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    border-top-width: 5px;
+    padding-top: 20px;
+}
