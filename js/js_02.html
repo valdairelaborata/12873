@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> pagina de exemplo estrutura basica </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Valdair">
+    <meta name="description" content="descrição top">
+    <meta name="keywords" content="html5, tecnologia">
+</head>
+
+<style>
+
+</style>
+
+<script>
+
+    function teste(Valor) {
+        console.log('Opa!!')
+        var divOutput = document.getElementById('output');
+        divOutput.innerText = 'Opa!!!!!' + ' ' + Valor
+    }
+
+
+</script>
+
+<body>
+
+    <input type="button" value="A" onclick="teste('A')">
+    <input type="button" value="B" onclick="teste('B')">
+    <input type="button" value="C" onclick="teste('C')">
+
+    <div id="output">Valor inicial</div>
+
+</body>
+
+</html>
