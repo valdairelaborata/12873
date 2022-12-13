@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> pagina de exemplo estrutura basica </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Valdair">
+    <meta name="description" content="descrição top">
+    <meta name="keywords" content="html5, tecnologia">
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <input type="button" value="+" onclick="calcular('+')">
+    <input type="button" value="-" onclick="calcular('-')">
+    <input type="button" value="x" onclick="calcular('x')">
+    <input type="button" value="/" onclick="calcular('/')">
+
+    <hr>
+
+    <div id="output">Valor inicial</div>
+
+    <script>
+
+        var primeiroNumero = 0
+        var segundoNumero = 0
+        var divOutput = document.getElementById('output');
+
+        obterNumero('Informe o primeiro número:');
+
+        exibir(primeiroNumero)
+
+        function calcular(operador) {
+
+            obterNumero('Informe o segundo número:')
+
+            let resultado = 0
+
+            switch (operador) {
+                case '+':
+                    resultado = primeiroNumero + segundoNumero
+                    break;
+                case '-':
+                    resultado = primeiroNumero - segundoNumero
+                    break;
+                case 'x':
+                    resultado = primeiroNumero * segundoNumero
+                    break;
+                case '/':
+                    resultado = primeiroNumero / segundoNumero
+                    break;
+                default:
+                    break;
+            }
+            exibir(resultado)
+        }
+
+        function obterNumero(label) {
+            let numero = parseFloat(prompt(label))
+
+            if (primeiroNumero === 0) {
+                primeiroNumero = numero
+            }
+            else {
+                segundoNumero = numero
+            }
+        }
+
+        function exibir(valor) {
+            divOutput.innerText = valor;
+        }
+
+    </script>
+
+</body>
+
+</html>
