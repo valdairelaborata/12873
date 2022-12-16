@@ -9,7 +9,7 @@ ex.: Uma tela de cadastro de produtos com os campos:
     - Margem de lucro
     - ...
 
-- Com os dados informados cria uma lista com os registros informados, possibilitando ao usuário editar/excluir
+- Com os dados informados, crie uma lista com os registros informados, possibilitando ao usuário editar/excluir
 - Os dados da lista devem ficar armazenados no localStorage do navegador.
 
 
