@@ -1,0 +1,15 @@
+## Lab Crud
+
+- Com base na lista de contatos, desenvolva uma tela com inputs responsivos que permita ao usuário 
+informar quatro ou mais campos.
+ex.: Uma tela de cadastro de produtos com os campos:
+    - Código
+    - Nome
+    - Descrição
+    - Margem de lucro
+    - ...
+
+- Com os dados informados cria uma lista com os registros informados, possibilitando ao usuário editar/excluir
+- Os dados da lista devem ficar armazenados no localStorage do navegador.
+
+
