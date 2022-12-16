@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de contatos</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<script>
+
+    $(function () {
+        $("#btnSalvar").click(function () {
+            var nome = $("#txtNome").val();
+            var idade = $("#txtIdade").val();
+            var telefone = $("#txtTelefone").val();
+
+            console.log(nome + ' - ' + idade + ' - ' + telefone)
+
+        });
+    });
+
+</script>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">
+                    <h1><strong>Lista de contatos</strong></h1>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-6 col-lg-5">
+                        <label for="txtNome">Nome:</label>
+                        <input id="txtNome" type="text" class="form-control">
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <label for="txtIdade">Idade:</label>
+                        <input id="txtIdade" type="text" class="form-control">
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <label for="txtTelefone">Telefone:</label>
+                        <input id="txtTelefone" type="text" class="form-control">
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-1">
+                        <br>
+                        <button id="btnSalvar" type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
