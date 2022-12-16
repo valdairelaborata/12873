@@ -16,15 +16,54 @@
 <script>
 
     $(function () {
-        $("#btnSalvar").click(function () {
-            var nome = $("#txtNome").val();
-            var idade = $("#txtIdade").val();
-            var telefone = $("#txtTelefone").val();
 
-            console.log(nome + ' - ' + idade + ' - ' + telefone)
+        listar();
+
+        $("#btnSalvar").click(function () {
+
+            var contato = {
+                nome: $("#txtNome").val(),
+                idade: $("#txtIdade").val(),
+                telefone: $("#txtTelefone").val()
+            }
+
+            var contatosStorage = JSON.parse(localStorage.getItem("contatos"))
+
+            if (contatosStorage == null) {
+                contatosStorage = []
+            }
+
+            contatosStorage.push(contato)
+            localStorage.setItem("contatos", JSON.stringify(contatosStorage))
+
+            $('input').val('')
+            $('#txtNome').focus()
+
+            listar();
 
         });
     });
+
+    function listar() {
+
+        $('#tblContatos tr:not(:first)').remove();
+
+        var contatosStorage = JSON.parse(localStorage.getItem("contatos"))
+
+        for (var posicao in contatosStorage) {
+
+            var contato = contatosStorage[posicao]
+
+
+            var botaoExcluir = '<button id="btnExcluir" alt="' + posicao + '" class="btn btn-danger btn-sm">Excluir</button>'
+            var botaoEditar = '<button id="btnEditar" alt="' + posicao + '" class="btn btn-info btn-sm">Editar</button>'
+            var acoes = '<td>' + botaoEditar + botaoExcluir + '</td>'
+            var linha = '<tr><td>' + contato.nome + '</td><td>' + contato.idade + '</td><td>' + contato.telefone + '</td>' + acoes + '</tr>'
+
+            $('#tblContatos tr:last').after(linha);
+        }
+
+    }
 
 </script>
 
@@ -53,6 +92,15 @@
                         <br>
                         <button id="btnSalvar" type="button" class="btn btn-primary">Salvar</button>
                     </div>
+                    <hr>
+                    <table id="tblContatos" class="table table-striped table-responsive table-hover">
+                        <tbody>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Telefone</th>
+                            <th>Ações</th>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
