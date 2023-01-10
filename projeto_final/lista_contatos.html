@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 </head>
 
@@ -20,6 +21,10 @@
     $(function () {
 
         listar();
+
+
+        $('input[name="phone-number"]').mask('(00) 0000-0000');
+        
 
         $("#btnSalvar").click(function () {
 
@@ -99,7 +104,6 @@
 
             var contato = contatosStorage[posicao]
 
-
             var botaoExcluir = '<button id="btnExcluir" posicao="' + posicao + '" class="btn btn-danger btn-sm">Excluir</button>'
             var botaoEditar = '<button id="btnEditar" posicao="' + posicao + '" class="btn btn-info btn-sm">Editar</button>'
             var acoes = '<td>' + botaoEditar + botaoExcluir + '</td>'
@@ -136,11 +140,11 @@
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-3">
                         <label for="txtIdade">Idade:</label>
-                        <input id="txtIdade" type="text" class="form-control">
+                        <input id="txtIdade" type="text" class="form-control idade">
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-3">
                         <label for="txtTelefone">Telefone:</label>
-                        <input id="txtTelefone" type="text" class="form-control">
+                        <input id="txtTelefone" type="text" name="phone-number"  class="form-control">
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-1">
                         <br>
